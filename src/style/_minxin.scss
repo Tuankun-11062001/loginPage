@@ -1,0 +1,71 @@
+@mixin background_image($url: $background_app) {
+  background: $url;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin dynamic_align(
+  $align: $flex_align,
+  $justify: $flex_justify,
+  $gap: $flex_gap,
+  $direction: $flex_direction,
+  $wrap: $flex_wrap
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin card_background() {
+  border-radius: $app_border_radius;
+  background: $card_background;
+  box-shadow: $card_shadow;
+  backdrop-filter: $card_blur;
+}
+
+@mixin input(
+  $width: 100%,
+  $padding: $app_padding,
+  $font-size: $app_fontSize,
+  $border: $input_border,
+  $outline: $input_outline,
+  $border-focused: $input_border_focused
+) {
+  width: $width;
+  padding: $padding - 2rem;
+  border-radius: $app_border_radius;
+  border: $border;
+  font-size: $font-size;
+  outline: $outline;
+  box-shadow: $card_shadow;
+  border: 0.1rem solid transparent;
+  &:focus {
+    border: $border-focused;
+  }
+}
+
+@mixin button(
+  $padding: $app_padding,
+  $font_size: $app_fontSize,
+  $border_radius: $app_border_radius,
+  $background: transparent,
+  $background_hover: $card_button_hover,
+  $text_hover: $card_text_hover
+) {
+  padding: $padding + 1rem;
+  padding-block: $padding - 2rem;
+  font-size: $font_size;
+  border-radius: $border_radius;
+  background: $background;
+  transition: $app_transition;
+  cursor: pointer;
+  border: 0.1rem solid $card_button_border;
+  &:hover {
+    background: $background_hover;
+    color: $text_hover;
+  }
+}

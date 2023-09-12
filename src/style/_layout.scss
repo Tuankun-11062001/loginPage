@@ -1,0 +1,5 @@
+.main-layout {
+  @include background-image();
+  @include dynamic_align($align: center, $justify: center);
+  height: $max_height;
+}

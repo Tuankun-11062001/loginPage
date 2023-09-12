@@ -1,0 +1,91 @@
+.card {
+  @include card_background();
+  @include dynamic_align($direction: column, $align: center, $gap: unset);
+  padding: $app_padding;
+  width: 90%;
+
+  @include lg {
+    width: $card_width;
+  }
+
+  h1 {
+    text-align: center;
+    width: 100%;
+    font-size: $app_fontSize + 2rem;
+  }
+  @include lg {
+    &_image {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+  &_image {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-bottom: $app_margin - 2rem;
+  }
+  &_user_id {
+    font-size: $app_fontSize;
+  }
+
+  &_input_group {
+    @include dynamic_align($direction: column, $gap: 0.5rem);
+    width: 100%;
+    margin-top: $app_margin - 1rem;
+    p {
+      font-size: 1.6rem;
+    }
+    input {
+      @include input();
+    }
+  }
+
+  &_error {
+    margin-top: $app_margin - 2rem;
+    font-size: $app_fontSize - 0.2rem;
+    color: $app_color_error;
+  }
+
+  &_button {
+    margin-top: $app_margin;
+    @include button();
+  }
+
+  &_bottom {
+    margin-top: $app_margin - 2rem;
+    @include dynamic_align($align: center, $direction: column, $gap: 0.5rem);
+    text-align: center;
+    p {
+      color: $app_text_gray;
+      font-size: $app_fontSize - 0.2rem;
+      a {
+        color: $app_text_black;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      div {
+        img {
+          margin-top: $app_margin - 2rem;
+          margin-inline: $app_margin - 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+    // media lg
+    @include lg {
+      @include dynamic_align($align: center);
+      p {
+        @include dynamic_align($align: center);
+        font-size: $app_fontSize - 0.2rem;
+
+        div {
+          img {
+            margin-inline: $app_margin - 2rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

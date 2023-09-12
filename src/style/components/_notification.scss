@@ -1,0 +1,21 @@
+.notification {
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30rem;
+  text-align: center;
+  background: rgb(45, 250, 113);
+  padding: $app_padding - 2rem;
+  border-radius: $app_border_radius;
+  box-shadow: $card_shadow;
+  font-size: $app_fontSize;
+  color: #fff;
+  transition: $app_transition;
+  z-index: 9;
+  opacity: 0;
+  &.active {
+    top: 2rem;
+    opacity: 1;
+  }
+}

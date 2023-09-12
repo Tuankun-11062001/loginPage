@@ -1,0 +1,37 @@
+// background app
+$background_app: url("../assets/bg.png");
+$max_height: 100vh;
+$max-width: 100%;
+
+// background card
+$card_background: rgba(255, 255, 255, 0.5);
+$card_shadow_color: rgba(20, 20, 20, 0.25);
+$card_shadow: 0px 0px 15px 0px $card_shadow_color;
+$card_blur: blur(2px);
+$card_width: 50%;
+
+// flex dynamic
+$flex_justify: start;
+$flex_align: start;
+$flex_direction: row;
+$flex_gap: 1rem;
+$flex_wrap: nowrap;
+
+// variable app
+$app_border_radius: 3rem;
+$app_padding: 3rem;
+$app_margin: 3rem;
+$app_fontSize: 1.6rem;
+$app_transition: all 0.3s ease;
+$app_text_gray: #7a7a7a;
+$app_text_black: #222;
+$app_color_error: #fd4646;
+
+// input
+$input_border: none;
+$input_outline: none;
+$input_border_focused: 0.1rem solid #222;
+// card
+$card_button_hover: #222;
+$card_text_hover: #fff;
+$card_button_border: #222;
